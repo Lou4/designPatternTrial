@@ -4,7 +4,7 @@ public class WarShipFactory extends AbstractFactoryShip {
 
 	private static WarShipFactory instance;
 	
-	public static WarShipFactory getInstance() {
+	public static AbstractFactoryShip getInstance() {
 		return (instance == null) ? new WarShipFactory() : instance;
 	}
 

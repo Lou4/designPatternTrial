@@ -1,24 +1,29 @@
 package com.ship;
 
+import com.shipBehavior.Lv1Power;
 import com.shipBehavior.PowerLv;
 
 public class SpecialWarShip implements Ship{
 
+	private final int damage = 150;
+	private PowerLv powerLv;
+	
+	public SpecialWarShip() {
+		powerLv = new Lv1Power();
+	}
+	
 	@Override
 	public int getPower() {
-		// TODO Auto-generated method stub
-		return 0;
+		return powerLv.getPower();
 	}
 
 	@Override
 	public int shoot() {
-		// TODO Auto-generated method stub
-		return 0;
+		return damage * powerLv.getPower();
 	}
 
 	public void setPower(PowerLv powerLv) {
-		// TODO Auto-generated method stub
-		
+		this.powerLv = powerLv;
 	}
 
 }

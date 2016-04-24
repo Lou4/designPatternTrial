@@ -2,21 +2,20 @@ package com.ship;
 
 public class CargoShipFactory extends AbstractFactoryShip {
 
+	private static CargoShipFactory instance;
+	
 	public static AbstractFactoryShip getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+		return (instance == null) ? new CargoShipFactory() : instance;
 	}
 	
 	@Override
-	Ship createNormal() {
-		// TODO Auto-generated method stub
-		return null;
+	public Ship createNormal() {
+		return new NormalCargoShip();
 	}
 
 	@Override
-	Ship createSpecial() {
-		// TODO Auto-generated method stub
-		return null;
+	public Ship createSpecial() {
+		return new SpecialCargoShip();
 	}
 
 }

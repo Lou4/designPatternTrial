@@ -2,6 +2,6 @@ package com.ship;
 
 public abstract class AbstractFactoryShip {
 
-	abstract Ship createNormal();
-	abstract Ship createSpecial();
+	abstract public Ship createNormal();
+	abstract public Ship createSpecial();
 }

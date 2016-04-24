@@ -9,7 +9,7 @@ import com.ship.WarShipFactory;
 
 public class TestFactoryDuck {
 
-	private WarShipFactory factoryShip;
+	private AbstractFactoryShip factoryShip;
 	
 	@Before
 	public void setUp(){

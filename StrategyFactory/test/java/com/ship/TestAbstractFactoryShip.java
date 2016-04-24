@@ -26,11 +26,11 @@ public class TestAbstractFactoryShip {
 		Ship normalCargo = cargoShipFactory.createNormal(); 
 		Ship specialCargo = cargoShipFactory.createSpecial();
 		
-		assertEquals(normalWar.getClass().getSimpleName(), NormalWarShip.class);
-		assertEquals(specialWar.getClass().getSimpleName(), SpecialWarShip.class);
+		assertEquals(normalWar.getClass().getSimpleName(), NormalWarShip.class.getSimpleName());
+		assertEquals(specialWar.getClass().getSimpleName(), SpecialWarShip.class.getSimpleName());
 		
-		assertEquals(normalCargo.getClass().getSimpleName(), NormalCargoShip.class);
-		assertEquals(specialCargo.getClass().getSimpleName(), SpecialCargoShip.class);
+		assertEquals(normalCargo.getClass().getSimpleName(), NormalCargoShip.class.getSimpleName());
+		assertEquals(specialCargo.getClass().getSimpleName(), SpecialCargoShip.class.getSimpleName());
 		
 		assertEquals(normalWar.shoot(), 100);
 		assertEquals(specialWar.shoot(), 150);
