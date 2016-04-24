@@ -5,7 +5,7 @@ public class Lv2Power implements PowerLv {
 	@Override
 	public int getPower() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 2;
 	}
 
 	@Override

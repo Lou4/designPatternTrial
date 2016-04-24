@@ -16,7 +16,6 @@ public class SpecialWarShip implements Ship{
 		return 0;
 	}
 
-	@Override
 	public void setPower(PowerLv powerLv) {
 		// TODO Auto-generated method stub
 		
