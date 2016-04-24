@@ -1,17 +1,9 @@
-package com.ship;
+package com.shipBehavior;
 
-import com.shipBehavior.PowerLv;
-
-public class SpecialWarShip implements Ship{
+public class Lv2Power implements PowerLv {
 
 	@Override
 	public int getPower() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int shoot() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

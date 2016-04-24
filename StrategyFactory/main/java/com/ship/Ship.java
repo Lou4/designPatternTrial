@@ -1,5 +1,7 @@
 package com.ship;
 
-public interface Ship {
+import com.shipBehavior.PowerLv;
 
+public interface Ship extends PowerLv {
+	int shoot();
 }
