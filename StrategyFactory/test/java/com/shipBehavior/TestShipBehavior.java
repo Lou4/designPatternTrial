@@ -11,6 +11,7 @@ import com.ship.Ship;
 public class TestShipBehavior {
 
 	Ship normalWar;
+	
 	@Before
 	public void setup(){
 		normalWar = FactoryShip.getInstance().createNormalWarShip();

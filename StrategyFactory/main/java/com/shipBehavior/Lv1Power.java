@@ -6,10 +6,4 @@ public class Lv1Power implements PowerLv {
 	public int getPower() {
 		return 1;
 	}
-
-	@Override
-	public void setPower(PowerLv powerLv) {
-		
-	}
-
 }
