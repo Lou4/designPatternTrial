@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ship.FactoryShip;
 import com.ship.Ship;
+import com.ship.WarShipFactory;
 
 public class TestShipBehavior {
 
@@ -14,7 +14,7 @@ public class TestShipBehavior {
 	
 	@Before
 	public void setup(){
-		normalWar = FactoryShip.getInstance().createNormalWarShip();
+		normalWar = WarShipFactory.getInstance().createNormal();
 	}
 	
 	@Test

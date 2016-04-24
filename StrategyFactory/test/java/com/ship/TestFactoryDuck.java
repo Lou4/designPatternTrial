@@ -5,21 +5,21 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ship.FactoryShip;
+import com.ship.WarShipFactory;
 
 public class TestFactoryDuck {
 
-	private FactoryShip factoryShip;
+	private WarShipFactory factoryShip;
 	
 	@Before
 	public void setUp(){
-		factoryShip = FactoryShip.getInstance();
+		factoryShip = WarShipFactory.getInstance();
 	}
 	
 	@Test
 	public void testIstantiateShip_className(){
-		Ship normalWar = factoryShip.createNormalWarShip();
-		Ship specialWar = factoryShip.createSpecialWarShip();
+		Ship normalWar = factoryShip.createNormal();
+		Ship specialWar = factoryShip.createSpecial();
 		
 		assertEquals(normalWar.getClass().getSimpleName(), NormalWarShip.class.getSimpleName());
 		assertEquals(specialWar.getClass().getSimpleName(), SpecialWarShip.class.getSimpleName());
