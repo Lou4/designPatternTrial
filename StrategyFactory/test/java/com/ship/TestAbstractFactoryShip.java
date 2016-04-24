@@ -56,13 +56,13 @@ public class TestAbstractFactoryShip {
 	
 	@Test
 	public void testCheckShipCreated_positiveScenario(){
-		Ship normalWar = warShipFactory.createNormal();
-		Ship specialWar = warShipFactory.createSpecial();
+		warShipFactory.createNormal();
+		warShipFactory.createSpecial();
 		
-		Ship normalCargo = cargoShipFactory.createNormal(); 
-		Ship specialCargo = cargoShipFactory.createSpecial();
+		cargoShipFactory.createNormal(); 
+		cargoShipFactory.createSpecial();
 		
-		List<String> expecteds = Arrays.asList("NormalWarShip", "SpecialWarShip", "NormalCarglShip", "SpecialCargoShip");
+		List<String> expecteds = Arrays.asList("NormalWarShip", "SpecialWarShip", "NormalCargoShip", "SpecialCargoShip");
 		List<String> actuals = AbstractFactoryShip.getListShipCreated();
 		assertArrayEquals(expecteds.toArray(), actuals.toArray());
 		
