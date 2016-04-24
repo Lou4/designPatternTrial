@@ -2,19 +2,18 @@ package com.ship;
 
 public class FactoryShip {
 
+	private static FactoryShip instance;
+	
 	public static FactoryShip getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+		return (instance == null) ? new FactoryShip() : instance;
 	}
 
 	public Ship createNormalWarShip() {
-		// TODO Auto-generated method stub
-		return null;
+		return new NormalWarShip();
 	}
 
 	public Ship createSpecialWarShip() {
-		// TODO Auto-generated method stub
-		return null;
+		return new SpecialWarShip();
 	}
 
 }

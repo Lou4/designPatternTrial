@@ -1,5 +1,5 @@
 package com.ship;
 
-public class SpecialWarShip {
+public class SpecialWarShip implements Ship{
 
 }
