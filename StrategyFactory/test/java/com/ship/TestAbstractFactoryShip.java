@@ -2,6 +2,9 @@ package com.ship;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -49,6 +52,19 @@ public class TestAbstractFactoryShip {
 		
 		assertEquals(normalCargo.shoot(), 20);
 		assertEquals(specialCargo.shoot(), 30);
+	}
+	
+	@Test
+	public void testCheckShipCreated_positiveScenario(){
+		Ship normalWar = warShipFactory.createNormal();
+		Ship specialWar = warShipFactory.createSpecial();
+		
+		Ship normalCargo = cargoShipFactory.createNormal(); 
+		Ship specialCargo = cargoShipFactory.createSpecial();
+		
+		List<String> expecteds = Arrays.asList("NormalWarShip", "SpecialWarShip", "NormalCarglShip", "SpecialCargoShip");
+		List<String> actuals = AbstractFactoryShip.getListShipCreated();
+		assertArrayEquals(expecteds.toArray(), actuals.toArray());
 		
 	}
 	
