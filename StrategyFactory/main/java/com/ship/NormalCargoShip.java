@@ -3,28 +3,16 @@ package com.ship;
 import com.shipBehavior.Lv1Power;
 import com.shipBehavior.PowerLv;
 
-public class NormalCargoShip implements Ship{
-
-	private final int damage = 10;
-	private PowerLv powerLv;
+/**
+ * Factory pattern - ConcreteProduct
+ * @author lou
+ *
+ */
+public class NormalCargoShip extends Ship{
 	
 	public NormalCargoShip() {
 		powerLv = new Lv1Power();
-	}
-	
-	@Override
-	public int getPower() {
-		return powerLv.getPower();
-	}
-
-	@Override
-	public int shoot() {
-		return damage * powerLv.getPower();
-	}
-
-	@Override
-	public void setPower(PowerLv powerLv) {
-		this.powerLv = powerLv;
+		damage = 10;
 	}
 
 }

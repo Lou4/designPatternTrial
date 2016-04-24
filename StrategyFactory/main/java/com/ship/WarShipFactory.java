@@ -1,5 +1,10 @@
 package com.ship;
 
+/**
+ * Abstract Factory pattern - ConcreteFactory
+ * @author lou
+ *
+ */
 public class WarShipFactory extends AbstractFactoryShip {
 
 	private static WarShipFactory instance;
