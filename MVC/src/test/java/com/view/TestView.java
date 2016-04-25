@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemErrRule;
 
+import static org.junit.Assert.*;
 public class TestView {
  
 	@Rule
@@ -24,6 +25,6 @@ public class TestView {
 		int actual = temperatureView.getGrapichElementTemperatureValue();
 		
 		assertEquals(30, actual);
-		assertEqual("30\n", ser.getLog());
+		assertEquals("30\n", ser.getLog());
 	}
 }
