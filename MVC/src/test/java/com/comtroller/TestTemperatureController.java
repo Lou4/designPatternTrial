@@ -1,6 +1,8 @@
-package com.model;
+package com.comtroller;
 
 import com.controller.TemperatureController;
+import com.model.TemperatureModel;
+
 import org.junit.Before;
 import org.junit.Test;
 
