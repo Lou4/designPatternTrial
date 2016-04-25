@@ -8,7 +8,7 @@ public class TemperatureModel {
         this.temperature = 0;
     }
 
-    public Integer getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
