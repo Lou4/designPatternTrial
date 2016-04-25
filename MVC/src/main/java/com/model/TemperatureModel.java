@@ -1,6 +1,8 @@
 package com.model;
 
-public class TemperatureModel {
+import java.util.Observable;
+
+public class TemperatureModel extends Observable {
 
     private Integer temperature;
 
@@ -13,6 +15,8 @@ public class TemperatureModel {
     }
 
     public void setTemperature(Integer temperature) {
+    	this.setChanged();
         this.temperature = temperature;
+        this.notifyObservers(temperature);
     }
 }

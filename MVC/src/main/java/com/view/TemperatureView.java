@@ -3,9 +3,12 @@ package com.view;
 import com.model.TemperatureModel;
 
 import javax.swing.*;
-import java.awt.*;
 
-public class TemperatureView {
+import java.awt.*;
+import java.util.Observable;
+import java.util.Observer;
+
+public class TemperatureView implements Observer{
 
     private TemperatureTextFieldView window;
 
@@ -22,4 +25,9 @@ public class TemperatureView {
     public int getGrapichElementTemperatureValue() {
         return window.getTextFieldValue();
     }
+
+	public void update(Observable o, Object arg) {
+		
+		
+	}
 }
