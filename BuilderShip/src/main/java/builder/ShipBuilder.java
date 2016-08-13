@@ -1,11 +1,11 @@
 package builder;
 
-import ship.Ship;
 
 public interface ShipBuilder {
-	void createShip();
-	void createShield(int val);
-	void createDamage(int val);
-	void createName(String name);
+	ShipBuilder createShip();
+	ShipBuilder createShield(int lv);
+	ShipBuilder createDamage(int lv);
+	ShipBuilder createSpy(int lv);
+	ShipBuilder createName();
 	Ship getShip();
 }

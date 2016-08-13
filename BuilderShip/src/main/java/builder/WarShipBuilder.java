@@ -1,6 +1,5 @@
 package builder;
 
-import ship.Ship;
 
 public class WarShipBuilder implements ShipBuilder{
 	
@@ -8,25 +7,34 @@ public class WarShipBuilder implements ShipBuilder{
 
 
 	@Override
-	public void createShip() {
+	public ShipBuilder createShip() {
 		ship = new Ship();
+		return this;
 	}
 
 	@Override
-	public void createShield(int val) {
-		ship.addShield(val*10);
+	public ShipBuilder createShield(int lv) {
+		ship.shield = lv*10;
+		return this;
 	}
 
 	@Override
-	public void createDamage(int val) {
-		ship.addDamage(val*15);
+	public ShipBuilder createDamage(int lv) {
+		ship.damage = lv*15;
+		return this;
 	}
 
 	@Override
-	public void createName(String name) {
-		ship.setName("War-"+name);
+	public ShipBuilder createName() {
+		ship.name = "War-Ship";
+		return this;
 	}
 
+	@Override
+	public ShipBuilder createSpy(int lv) {
+		ship.spy = 0;
+		return this;
+	}
 
 	@Override
 	public Ship getShip() {
