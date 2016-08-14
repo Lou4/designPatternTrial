@@ -22,4 +22,8 @@ public class Computer {
 	public String toString() {
 		return " - Ram: " + ram + "MB, Cpu: " + cpu + "GHz, Hard disk: " + hardDisk + "GB, Led: " + led + ", Resolution: " + resolution + "K, Price: " + cost + "€  - ";
 	}
+	
+	public void turnOn(){
+		System.out.println("The computer turned on in " + 10/cpu + "sec.");
+	}
 }
